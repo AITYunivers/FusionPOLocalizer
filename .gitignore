@@ -18,6 +18,7 @@ mono_crash.*
 
 # Build results
 MFX/
+Tenp/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -362,3 +363,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# DarkEdif - Post Minified JSON
+DarkExt.PostMinify.json
