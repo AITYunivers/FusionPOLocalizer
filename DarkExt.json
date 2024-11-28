@@ -1,0 +1,178 @@
+{
+	"Identifier": "L10N",
+	"Dependencies": "",
+	"UK English": {
+		"About": {
+			"Name": "PO Localizer",
+			"Author": "Yunivers",
+			"Copyright": "Copyright \u00A9 2024 by Yunivers",
+			"Comment": "An extension that aims to simplify the process of localization",
+			"Help": "https://www.gnu.org/software/gettext/manual/html_node/index.html"
+		},
+		"ActionMenu": [
+			[ 0, "Load Translation" ],
+			[ 1, "Unload Translation" ]
+		],
+		"ConditionMenu": [
+			[ 0, "On Translation File Loaded" ],
+			[ 3, "Translation File Is Loaded?" ],
+			"---",
+			[ 2, "Has Key" ],
+			[ 5, "Has Plural Key" ],
+			[ 4, "Has Key with Context" ],
+			[ 6, "Has Plural Key with Context" ],
+			"---",
+			[ 1, "On Error" ],
+			"---"
+		],
+		"ExpressionMenu": [
+			[
+				"Key Values",
+				[ 0, "Get Key Value" ],
+				[ 4, "Get Key Value with Context" ],
+				[ 5, "Get Plural Key Value" ],
+				[ 7, "Get Plural Key Value with Context" ]
+			],
+			"---",
+			[ 3, "Get Language Code" ],
+			[ 6, "Get Metadata" ],
+			"---",
+			[
+				"Error Info",
+				[ 1, "Error Code" ],
+				[ 2, "Error Reason" ]
+			],
+			"---"
+		],
+		"Actions": [
+			// [0] Load Translation
+			{
+				"Title": "Load Translation File from %0",
+				"Parameters": [
+					[ "String", ".PO (Portable Object) File Path" ]
+				]
+			},
+			// [1] Unload Translation
+			{
+				"Title": "Unload Translation File"
+			}
+		],
+		"Conditions": [
+			// [0] On Translation File Loaded
+			{
+				"Title": "%o : On Translation File Loaded",
+				"Triggered": true
+			},
+			// [1] On Error
+			{
+				"Title": "%o : On Error",
+				"Triggered": true
+			},
+			// [2] Has Key
+			{
+				"Title": "%o : Translation has key %0",
+				"Parameters": [
+					[ "String", "Translation Key" ]
+				]
+			},
+			// [3] Translation File Is Loaded?
+			{
+				"Title": "%o : Translation File Is Loaded?"
+			},
+			// [4] Has Key with Context
+			{
+				"Title": "%o : Translation has key %0 with context %1",
+				"Parameters": [
+					[ "String", "Translation Key" ],
+					[ "String", "Context" ]
+				]
+			},
+			// [5] Has Plural Key
+			{
+				"Title": "%o : Translation has plural key %0",
+				"Parameters": [
+					[ "String", "Translation Key (Not the plural version)" ]
+				]
+			},
+			// [6] Has Plural Key with Context
+			{
+				"Title": "%o : Translation has plural key %0 with context %1",
+				"Parameters": [
+					[ "String", "Translation Key (Not the plural version)" ],
+					[ "String", "Context" ]
+				]
+			}
+		],
+		"Expressions": [
+			// [0] Get Key Value
+			{
+				"Title": "GetKeyValue$(",
+				"Returns": "Text",
+				"Parameters": [
+					[ "String", "Translation Key" ]
+				]
+			},
+			// [1] Error Code
+			{
+				"Title": "ErrCode(",
+				"Returns": "Integer"
+			},
+			// [2] Error Reason
+			{
+				"Title": "ErrReason$(",
+				"Returns": "Text"
+			},
+			// [3] Get Language Code
+			{
+				"Title": "LangCode$(",
+				"Returns": "Text"
+			},
+			// [4] Get Key Value with Context
+			{
+				"Title": "GetKeyValueContext$(",
+				"Returns": "Text",
+				"Parameters": [
+					[ "String", "Translation Key" ],
+					[ "String", "Context" ]
+				]
+			},
+			// [5] Get Plural Key Value
+			{
+				"Title": "GetKeyValuePlural$(",
+				"Returns": "Text",
+				"Parameters": [
+					[ "String", "Translation Key" ],
+					[ "String", "Plural Translation Key" ],
+					[ "Integer", "Plural Check" ]
+				]
+			},
+			// [6] Get Metadata
+			{
+				"Title": "GetMetadata$(",
+				"Returns": "Text",
+				"Parameters": [
+					[ "String", "Metadata Key" ]
+				]
+			},
+			// [7] Get Plural Key Value with Context
+			{
+				"Title": "GetKeyValuePluralContext$(",
+				"Returns": "Text",
+				"Parameters": [
+					[ "String", "Translation Key" ],
+					[ "String", "Plural Translation Key" ],
+					[ "Integer", "Plural Check" ],
+					[ "String", "Context" ]
+				]
+			}
+		],
+		"Properties": [
+			{
+				"Title": "Default Language Code",
+				"Info": "For LangCode when you unload a translation",
+				"Type": "Editbox String",
+				"DefaultState": "en"
+			}
+		]
+	}
+}
