@@ -35,8 +35,6 @@ Extension::Extension(const EDITDATA* const edPtr, void* const objCExtPtr) :
 	LinkExpression(5, GetPluralKeyValue);
 	LinkExpression(6, GetMetadata);
 	LinkExpression(7, GetPluralKeyValueWithContext);
-
-	DefaultLangCode = edPtr->Props.GetPropertyStr(0);
 }
 
 Extension::~Extension()

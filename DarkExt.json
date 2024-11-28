@@ -14,7 +14,7 @@
 			[ 1, "Unload Translation" ]
 		],
 		"ConditionMenu": [
-			[ 0, "On Translation File Loaded" ],
+			[ 0, "On Translation File Updated" ],
 			[ 3, "Translation File Is Loaded?" ],
 			"---",
 			[ 2, "Has Key" ],
@@ -58,9 +58,9 @@
 			}
 		],
 		"Conditions": [
-			// [0] On Translation File Loaded
+			// [0] On Translation File Updated
 			{
-				"Title": "%o : On Translation File Loaded",
+				"Title": "%o : On Translation File Updated",
 				"Triggered": true
 			},
 			// [1] On Error
@@ -166,13 +166,6 @@
 				]
 			}
 		],
-		"Properties": [
-			{
-				"Title": "Default Language Code",
-				"Info": "For LangCode when you unload a translation",
-				"Type": "Editbox String",
-				"DefaultState": "en"
-			}
-		]
+		"Properties": []
 	}
 }

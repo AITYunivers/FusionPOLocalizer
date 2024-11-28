@@ -43,7 +43,7 @@ const TCHAR* Extension::GetPluralKeyValueWithContext(const TCHAR* key, const TCH
 const TCHAR* Extension::GetLangCode()
 {
 	if (!TranslationLoaded())
-		return Runtime.CopyString(DefaultLangCode.c_str());
+		return Runtime.CopyString(_T(""));
 
 	return Runtime.CopyString(DarkEdif::UTF8ToTString(spiritCat->get_metadata().language).c_str());
 }

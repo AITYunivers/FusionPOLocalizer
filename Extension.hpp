@@ -37,7 +37,6 @@ public:
 #endif
 	~Extension();
 
-	std::tstring DefaultLangCode;
 	std::deque<std::unique_ptr<std::thread>> Threads;
 
 	// Spirit-PO stuff
